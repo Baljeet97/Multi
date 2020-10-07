@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "926873970209",
+    "firebase_url": "https://multi-f438f.firebaseio.com",
+    "project_id": "multi-f438f",
+    "storage_bucket": "multi-f438f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926873970209:android:2f8ffdb5c8a1ff7f73a560",
+        "android_client_info": {
+          "package_name": "com.example.housingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926873970209-0ejmrdioc2ujc747sq9v2h40f65h5g9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcw8Uy4V8YuW2j36RFFDzAAMAqNCscipw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926873970209-0ejmrdioc2ujc747sq9v2h40f65h5g9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
