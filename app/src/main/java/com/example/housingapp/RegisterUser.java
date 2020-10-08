@@ -94,93 +94,78 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         final String reason = editReason.getText().toString().trim();
 
 
-        if (name.isEmpty()){
+        if (name.isEmpty()) {
             editName.setError("Full Name is Required");
             editName.requestFocus();
             return;
         }
 
-        if (number.isEmpty()){
+        if (number.isEmpty()) {
             editNumber.setError("Number is Required");
             editNumber.requestFocus();
             return;
         }
 
-        if (dateOfBirth.isEmpty()){
+        if (dateOfBirth.isEmpty()) {
             editNumber.setError("Date of Birth is Required");
             editNumber.requestFocus();
             return;
         }
 
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             editEmail.setError("Email is required");
             editEmail.requestFocus();
             return;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editEmail.setError("Please provide valid Email");
             editEmail.requestFocus();
             return;
         }
 
-        if (password.isEmpty()){
+        if (password.isEmpty()) {
             editPassword.setError("Password is Required");
             editPassword.requestFocus();
             return;
         }
 
-        if (password.length() < 7){
+        if (password.length() < 7) {
             editPassword.setError("Min password length should be at least 7 characters");
             editPassword.requestFocus();
         }
 
         progressBar.setVisibility(View.VISIBLE);
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             User user = new User(name, email, dateOfBirth, number, companyName, position,
-                                    time, contractTime, employerName, employerContact, contractType, payment, ownerName,reason);
+                                    time, contractTime, employerName, employerContact, contractType, payment, ownerName, reason);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()){
+                                    if (task.isSuccessful()) {
                                         Toast.makeText(RegisterUser.this, "User has been register successfully", Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility(View.GONE);
-                                    }else {
+                                        startActivity(new Intent(RegisterUser.this, MainActivity.class));
+                                    } else {
                                         Toast.makeText(RegisterUser.this, "Failed to register! Try again", Toast.LENGTH_LONG).show();
-                                        progressBar.setVisibility(View.GONE);
                                     }
+//                                    progressBar.setVisibility(View.GONE);
 
                                 }
                             });
-                        }else {
+                        } else {
                             Toast.makeText(RegisterUser.this, "Failed to register! Try again", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
