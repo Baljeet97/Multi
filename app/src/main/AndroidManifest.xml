@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".FindFlateMate"></activity>
+        <activity android:name=".FindRoom" />
+        <activity android:name=".Calculator" />
+        <activity android:name=".Home" />
         <activity android:name=".RegisterUser" />
         <activity android:name=".MainActivity">
             <intent-filter>

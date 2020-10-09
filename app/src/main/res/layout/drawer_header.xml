@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="234dp"
-        android:layout_height="212dp"
-        android:text="Header"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="279dp" />
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_width="403dp"
+        android:layout_height="206dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="42dp"
+        android:maxHeight="42dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

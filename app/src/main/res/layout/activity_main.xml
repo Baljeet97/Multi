@@ -53,7 +53,7 @@
         android:layout_marginTop="44dp"
         android:text="Login"
         android:textColor="#ffffff"
-        android:backgroundTint="#70B603"
+        android:background="@drawable/rounder_corners"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

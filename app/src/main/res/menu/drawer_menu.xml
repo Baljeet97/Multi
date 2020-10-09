@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <item
         android:id="@+id/home"
+        android:icon="@drawable/home"
         android:title="Home" />
     <item
         android:id="@+id/help"
+        android:icon="@drawable/info"
         android:title="Help" />
     <item
         android:id="@+id/legal"
+        android:icon="@drawable/legal"
         android:title="Legal" />
     <item
-        android:id="@+id/tica"
-        android:title="Tica" />
-    <item
         android:id="@+id/abt"
+        android:icon="@drawable/ab"
         android:title="Aboriginal or Islander" />
 </menu>
