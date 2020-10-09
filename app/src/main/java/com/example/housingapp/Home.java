@@ -53,6 +53,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
         fragmentTransaction.commit();
 
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            if (bundle.getString("expenses") != null){
+                Toast.makeText(getApplicationContext(), "expenses",Toast.LENGTH_LONG).show();
+            }
+        }
 
 
 
@@ -79,4 +85,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         return true;
     }
+//
+//    @Override
+//    public void onButtonSelected() {
+//
+//    }
 }

@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteX="-16dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/expenses"
         android:layout_width="171dp"
         android:layout_height="95dp"
         android:layout_marginStart="136dp"
@@ -50,7 +50,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/flat"
         android:layout_width="166dp"
         android:layout_height="78dp"
         android:layout_marginStart="136dp"
@@ -58,12 +58,12 @@
         android:background="@drawable/rounder_corners"
         android:text="Find A FlatMate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/expenses"
         tools:ignore="MissingConstraints" />
 
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/room"
         android:layout_width="166dp"
         android:layout_height="80dp"
         android:layout_marginStart="136dp"
@@ -71,7 +71,7 @@
         android:background="@drawable/rounder_corners"
         android:text="Find A Room"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/flat"
         tools:ignore="MissingConstraints" />
 
     <TextView
