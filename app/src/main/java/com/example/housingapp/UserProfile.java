@@ -19,6 +19,8 @@ public class UserProfile extends AppCompatActivity {
 
     private String userID;
 
+    //TODO show user profile
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
