@@ -52,15 +52,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
         fragmentTransaction.commit();
-
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
-            if (bundle.getString("expenses") != null){
-                Toast.makeText(getApplicationContext(), "expenses",Toast.LENGTH_LONG).show();
-            }
-        }
-
-
+        
 
     }
 
@@ -79,6 +71,22 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_fragment, new HelpFragment());
+            fragmentTransaction.commit();
+        }
+
+        if (item.getItemId() == R.id.legal){
+//            Toast.makeText(Home.this, "Try again", Toast.LENGTH_LONG).show();
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment, new LegalFragment());
+            fragmentTransaction.commit();
+        }
+
+        if (item.getItemId() == R.id.abt){
+//            Toast.makeText(Home.this, "Try again", Toast.LENGTH_LONG).show();
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment, new AboFragment());
             fragmentTransaction.commit();
         }
 
