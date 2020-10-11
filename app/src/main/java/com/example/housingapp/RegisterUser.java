@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editName, editEmail, editDob, editNumber, editCompanyName,
-            editPosition, editTime, editContractTime, editEmpName, editEmpContact,
+            editPosition, editTime, editEmpName, editEmpContact,
             editType, editPayment, editOwnerName, editReason, editPassword;
     private Button registerUser, signPage;
     ProgressBar progressBar;
@@ -43,7 +43,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editPosition = findViewById(R.id.position);
         editTime = findViewById(R.id.time);
         editPassword = findViewById(R.id.password);
-        editContractTime = findViewById(R.id.contractTime);
         editEmpName = findViewById(R.id.empName);
         editEmpContact = findViewById(R.id.empContact);
         editType = findViewById(R.id.type);
@@ -85,7 +84,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         final String companyName = editCompanyName.getText().toString().trim();
         final String position = editPosition.getText().toString().trim();
         final String time = editTime.getText().toString().trim();
-        final String contractTime = editContractTime.getText().toString().trim();
         final String employerName = editEmpName.getText().toString().trim();
         final String employerContact = editEmpContact.getText().toString().trim();
         final String contractType = editType.getText().toString().trim();
@@ -143,7 +141,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             User user = new User(name, email, dateOfBirth, number, companyName, position,
-                                    time, contractTime, employerName, employerContact, contractType, payment, ownerName, reason);
+                                    time, employerName, employerContact, contractType, payment, ownerName, reason);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
