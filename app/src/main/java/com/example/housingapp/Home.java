@@ -27,7 +27,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     FragmentTransaction fragmentTransaction;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,44 +51,39 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container_fragment, new HomeFragment());
         fragmentTransaction.commit();
-        
+
 
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         drawerLayout.closeDrawer(GravityCompat.START);
-       //replace if else with switch case
-        if (item.getItemId() == R.id.home){
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
-            fragmentTransaction.commit();
+        switch (item.getItemId()) {
+            case R.id.home:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+                fragmentTransaction.commit();
+                break;
+            case R.id.help:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container_fragment, new HelpFragment());
+                fragmentTransaction.commit();
+                break;
+            case R.id.legal:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container_fragment, new LegalFragment());
+                fragmentTransaction.commit();
+                break;
+            case R.id.abt:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container_fragment, new AboFragment());
+                fragmentTransaction.commit();
+                break;
         }
-        if (item.getItemId() == R.id.help){
-//            Toast.makeText(Home.this, "Try again", Toast.LENGTH_LONG).show();
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new HelpFragment());
-            fragmentTransaction.commit();
-        }
-
-        if (item.getItemId() == R.id.legal){
-//            Toast.makeText(Home.this, "Try again", Toast.LENGTH_LONG).show();
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new LegalFragment());
-            fragmentTransaction.commit();
-        }
-
-        if (item.getItemId() == R.id.abt){
-//            Toast.makeText(Home.this, "Try again", Toast.LENGTH_LONG).show();
-            fragmentManager = getSupportFragmentManager();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new AboFragment());
-            fragmentTransaction.commit();
-        }
-
 
         return true;
     }
