@@ -15,7 +15,7 @@ public class Calculator extends AppCompatActivity {
     EditText phoneInput;
     EditText fuelInput;
     EditText otherExpensesInput;
-    TextView output, deduct;
+    TextView output, deduct, finalOutput, colourBarOutput;
 
 
     @Override
@@ -30,10 +30,21 @@ public class Calculator extends AppCompatActivity {
         otherExpensesInput = findViewById(R.id.otherExpensesTextInput);
         output = findViewById(R.id.availableMoneyTextOutput);
         deduct = findViewById(R.id.deduct);
+        finalOutput = findViewById(R.id.afterAllDeducted);
+        colourBarOutput = findViewById(R.id.colourBar);
 
 
         TextWatcher textWatcher = new TextWatcher() {
             double finalIncome;
+            double fullOutput;
+            double fullIncome = 0;
+            double internet = 0;
+            double groceries = 0;
+            double phone = 0;
+            double fuel = 0;
+            double others = 0;
+            String outputText;
+
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -43,16 +54,37 @@ public class Calculator extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (!incomeInput.getText().toString().equals("")) {
                     float income = Float.parseFloat(incomeInput.getText().toString());
-//                    double deductible = Double.parseDouble(deduct.getText().toString());
                     finalIncome = (income * 0.3);
+                    fullIncome = income;
                     output.setText(String.valueOf(finalIncome));
                 }
 
+                if (!internetInput.getText().toString().equals("")) {
+                    internet = Float.parseFloat(internetInput.getText().toString());
+                }
+
+                if (!groceriesInput.getText().toString().equals("")) {
+                    groceries = Float.parseFloat(groceriesInput.getText().toString());
+                }
+
+                if (!phoneInput.getText().toString().equals("")) {
+                    phone = Float.parseFloat(phoneInput.getText().toString());
+                }
+
+                if (!fuelInput.getText().toString().equals("")) {
+                    fuel = Float.parseFloat(fuelInput.getText().toString());
+                }
+
+                if (!otherExpensesInput.getText().toString().equals("")) {
+                    others = Float.parseFloat(otherExpensesInput.getText().toString());
+                }
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-
+                fullOutput = fullIncome - finalIncome - internet - groceries - phone - fuel - others;
+                outputText = "$" + fullOutput;
+                finalOutput.setText(outputText);
             }
         };
         incomeInput.addTextChangedListener(textWatcher);
@@ -62,61 +94,5 @@ public class Calculator extends AppCompatActivity {
         groceriesInput.addTextChangedListener(textWatcher);
         otherExpensesInput.addTextChangedListener(textWatcher);
     }
-
-
-//    public static class calculatorWatcher implements TextWatcher {
-//        private EditText mEditText;
-//        int income;
-//        int internet;
-//        int groceries;
-//        int phone;
-//        int fuel;
-//        int others;
-//        String availableMoney;
-//
-//        private calculatorWatcher(EditText editText) {
-//            mEditText = editText;
-//        }
-//
-//        @Override
-//        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//
-//        }
-//
-//        @Override
-//        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-//            switch ((mEditText.getId())){
-//                case R.id.incomeTextInput:
-//                    income = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//                case R.id.internetTextInput:
-//                    internet = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//                case R.id.groceriesTextInput:
-//                    groceries = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//                case R.id.phoneTextInput:
-//                    phone = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//                case R.id.fuelTextInput:
-//                    fuel = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//                case R.id.otherExpensesTextInput:
-//                    others = Integer.parseInt(String.valueOf(charSequence));
-//                    break;
-//            }
-//        }
-//
-//        @Override
-//        public void afterTextChanged(Editable editable) {
-//            availableMoney = Double.toString(income - (income *0.3) - internet - groceries -
-//                    phone - fuel - others);
-//
-//            // For testing purposes available money is displayed in console
-//            System.out.println(availableMoney);
-//            //output.setText(availableMoney);
-//        }
-//
-//    };
 
 }
