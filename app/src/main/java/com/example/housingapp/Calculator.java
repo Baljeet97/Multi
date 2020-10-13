@@ -35,14 +35,14 @@ public class Calculator extends AppCompatActivity {
 
 
         TextWatcher textWatcher = new TextWatcher() {
-            double finalIncome;
-            double fullOutput;
+            double finalIncome = 0;
             double fullIncome = 0;
             double internet = 0;
             double groceries = 0;
             double phone = 0;
             double fuel = 0;
             double others = 0;
+            double fullOutput;
             String outputText;
 
             @Override
@@ -85,14 +85,30 @@ public class Calculator extends AppCompatActivity {
                 fullOutput = fullIncome - finalIncome - internet - groceries - phone - fuel - others;
                 outputText = "$" + fullOutput;
                 finalOutput.setText(outputText);
+                changeColourBar(finalIncome);
             }
         };
+
         incomeInput.addTextChangedListener(textWatcher);
         internetInput.addTextChangedListener(textWatcher);
         fuelInput.addTextChangedListener(textWatcher);
         phoneInput.addTextChangedListener(textWatcher);
         groceriesInput.addTextChangedListener(textWatcher);
         otherExpensesInput.addTextChangedListener(textWatcher);
+    }
+
+    public void changeColourBar(double amount) {
+        String roommatesText ="";
+        if (amount <= 150){
+            roommatesText = "Find 2 or more people";
+        }
+        else if (amount < 300 && amount > 150){
+            roommatesText = "Find 1 or more people";
+        }
+        else{
+            roommatesText = "Can rent by yourself";
+        }
+        colourBarOutput.setText(roommatesText);
     }
 
 }
