@@ -268,6 +268,66 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deduct"
             tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/internetIcon"
+            android:layout_width="60dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/internetTitle"
+            app:layout_constraintTop_toBottomOf="@+id/calculateOtherExpenses"
+            app:srcCompat="@drawable/internet" />
+
+        <ImageView
+            android:id="@+id/fuelIcon"
+            android:layout_width="55dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/fuelTitle"
+            app:layout_constraintTop_toBottomOf="@+id/internetIcon"
+            app:srcCompat="@drawable/fuel" />
+
+        <ImageView
+            android:id="@+id/phoneIcon"
+            android:layout_width="58dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/phonePlanTitle"
+            app:layout_constraintTop_toBottomOf="@+id/fuelIcon"
+            app:srcCompat="@drawable/phone" />
+
+        <ImageView
+            android:id="@+id/groceriesIcon"
+            android:layout_width="63dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/groceriesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/phoneIcon"
+            app:srcCompat="@drawable/groceries" />
+
+        <ImageView
+            android:id="@+id/otherIcon"
+            android:layout_width="55dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/otherExpensesTitle"
+            app:layout_constraintTop_toBottomOf="@+id/groceriesIcon"
+            app:srcCompat="@drawable/other" />
+
+        <ImageView
+            android:id="@+id/incomeIcon"
+            android:layout_width="59dp"
+            android:layout_height="62dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/deduct"
+            app:layout_constraintEnd_toStartOf="@+id/incomeTitle"
+            app:srcCompat="@drawable/money" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
