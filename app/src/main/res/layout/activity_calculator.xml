@@ -1,238 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Calculator">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        tools:ignore="MissingConstraints"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark" />
 
-    <Button
-        android:id="@+id/findRoomButton"
-        android:layout_width="142dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Find a Room"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/findFlatmateButton"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/findFlatmateButton"
-        android:layout_width="142dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="36dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Find A Flatmate"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/findRoomButton" />
-
-    <TextView
-        android:id="@+id/availableMoneyTitle"
-        android:layout_width="402dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="28dp"
-
-        android:text="Money Available for Rent"
-        app:layout_constraintTop_toBottomOf="@+id/otherExpensesTextInput"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="12dp" />
-
-    <TextView
-        android:id="@+id/incomeTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="5dp"
+        tools:context=".Calculator">
 
-        android:layout_marginEnd="299dp"
-        android:text="Weekly Income"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/incomeTextInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deduct"
-        tools:ignore="MissingConstraints" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/internetTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Weekly Internet"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/incomeTextInput"
-        tools:layout_editor_absoluteX="17dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/incomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/groceriesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Weekly Groceries"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextInput"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+            android:layout_marginTop="16dp"
+            android:text="Weekly Income"
 
-    <TextView
-        android:id="@+id/phonePlanTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="268dp"
-        android:text="Weekly Phone Plan"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fuelTextInput" />
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp" />
 
-    <TextView
-        android:id="@+id/fuelTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Weekly Fuel"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/internetTextInput"
-        tools:layout_editor_absoluteX="12dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/internetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weekly Internet"
+            android:textSize="18sp"
 
-    <TextView
-        android:id="@+id/otherExpensesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="Other Weekly Expenses"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/groceriesTextInput"
-        tools:layout_editor_absoluteX="17dp"
-        tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="504dp" />
 
-    <EditText
-        android:id="@+id/incomeTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
+        <TextView
+            android:id="@+id/groceriesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="Weekly Groceries"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTextInput"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp" />
 
-        app:layout_constraintTop_toBottomOf="@+id/incomeTitle"
-        tools:layout_editor_absoluteX="39dp"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/phonePlanTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="268dp"
+            android:text="Weekly Phone Plan"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fuelTextInput" />
 
-    <TextView
-        android:id="@+id/availableMoneyTextOutput"
-        android:layout_width="132dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="25dp"
-        android:ems="10"
+        <TextView
+            android:id="@+id/fuelTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Weekly Fuel"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/internetTextInput"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="12dp" />
 
-        android:text="$0"
-        app:layout_constraintTop_toBottomOf="@+id/availableMoneyTitle"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="39dp" />
+        <TextView
+            android:id="@+id/otherExpensesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Other Weekly Expenses"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/groceriesTextInput"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="17dp" />
 
-    <EditText
-        android:id="@+id/internetTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
+        <EditText
+            android:id="@+id/incomeTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
 
-        app:layout_constraintTop_toBottomOf="@+id/internetTitle"
-        tools:layout_editor_absoluteX="46dp"
-        tools:ignore="MissingConstraints" />
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/incomeTitle"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="91dp" />
 
-    <EditText
-        android:id="@+id/groceriesTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginEnd="210dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
+        <TextView
+            android:id="@+id/availableMoneyTextOutput"
+            android:layout_width="132dp"
+            android:layout_height="35dp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groceriesTitle" />
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:text="$0"
+            app:layout_constraintStart_toEndOf="@+id/deduct"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="249dp" />
 
-    <EditText
-        android:id="@+id/phoneTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="220dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
+        <EditText
+            android:id="@+id/internetTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
+            android:textSize="14sp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonePlanTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/internetTitle"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="46dp" />
 
-    <EditText
-        android:id="@+id/fuelTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="210dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
+        <EditText
+            android:id="@+id/groceriesTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginEnd="210dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
+            android:textSize="14sp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fuelTitle" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groceriesTitle" />
 
-    <EditText
-        android:id="@+id/otherExpensesTextInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="$"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/otherExpensesTitle"
-        tools:layout_editor_absoluteX="80dp"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/phoneTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="144dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
+            android:textSize="14sp"
 
-    <TextView
-        android:id="@+id/deduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="351dp"
-        android:layout_marginBottom="5dp"
-        android:text="0.30"
-        app:layout_constraintBottom_toTopOf="@+id/incomeTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:ignore="MissingConstraints" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonePlanTitle" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/fuelTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="210dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
+            android:textSize="14sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fuelTitle" />
+
+        <EditText
+            android:id="@+id/otherExpensesTextInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ems="10"
+            android:hint="$"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/otherExpensesTitle"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="80dp" />
+
+        <TextView
+            android:id="@+id/afterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:text="Money Available after rent and expenses"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otherExpensesTextInput" />
+
+        <TextView
+            android:id="@+id/afterAllDeducted"
+            android:text="final output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afterAll"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/deduct"
+            android:layout_width="212dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="24dp"
+            android:text="Minimum Money Required for rent"
+            app:layout_constraintTop_toBottomOf="@+id/incomeTextInput"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="12dp" />
+
+        <TextView
+            android:id="@+id/calculateOtherExpenses"
+            android:layout_width="392dp"
+            android:layout_height="42dp"
+            android:text="Calculate other Expenses"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculator"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="109dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="274dp"
+            android:layout_height="83dp"
+            android:text="Colour Bar"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="326dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

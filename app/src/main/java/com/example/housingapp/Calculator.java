@@ -44,7 +44,7 @@ public class Calculator extends AppCompatActivity {
                 if (!incomeInput.getText().toString().equals("")) {
                     float income = Float.parseFloat(incomeInput.getText().toString());
 //                    double deductible = Double.parseDouble(deduct.getText().toString());
-                    finalIncome = (income * 0.7);
+                    finalIncome = (income * 0.3);
                     output.setText(String.valueOf(finalIncome));
                 }
 
