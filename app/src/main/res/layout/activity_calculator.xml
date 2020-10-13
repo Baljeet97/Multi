@@ -20,6 +20,7 @@
         android:layout_marginStart="70dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="36dp"
+        android:background="@drawable/rounder_corners"
         android:text="Find a Room"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +34,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="36dp"
+        android:background="@drawable/rounder_corners"
         android:text="Find A Flatmate"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,153 +43,124 @@
 
     <TextView
         android:id="@+id/availableMoneyTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="202dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="402dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+
         android:text="Money Available for Rent"
-        app:layout_constraintBottom_toTopOf="@+id/findRoomButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/otherExpensesTextInput"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="12dp" />
 
     <TextView
         android:id="@+id/incomeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+
+        android:layout_marginEnd="299dp"
         android:text="Weekly Income"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/incomeTextInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/deduct"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/internetTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginTop="15dp"
         android:text="Weekly Internet"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/incomeTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/incomeTextInput"
+        tools:layout_editor_absoluteX="17dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/groceriesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginTop="11dp"
         android:text="Weekly Groceries"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/internetTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextInput"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/phonePlanTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="268dp"
         android:text="Weekly Phone Plan"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groceriesTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/fuelTextInput" />
 
     <TextView
         android:id="@+id/fuelTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginTop="9dp"
         android:text="Weekly Fuel"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/internetTextInput"
+        tools:layout_editor_absoluteX="12dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/otherExpensesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="226dp"
+        android:layout_marginTop="9dp"
         android:text="Other Weekly Expenses"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fuelTextInput" />
+        app:layout_constraintTop_toBottomOf="@+id/groceriesTextInput"
+        tools:layout_editor_absoluteX="17dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/incomeTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/internetTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/incomeTitle" />
+
+        app:layout_constraintTop_toBottomOf="@+id/incomeTitle"
+        tools:layout_editor_absoluteX="39dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/availableMoneyTextOutput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="2dp"
+        android:layout_width="132dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
+
         android:text="$0"
-        app:layout_constraintBottom_toTopOf="@+id/findRoomButton"
-        app:layout_constraintEnd_toStartOf="@+id/findFlatmateButton"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toEndOf="@+id/findRoomButton"
         app:layout_constraintTop_toBottomOf="@+id/availableMoneyTitle"
-        app:layout_constraintVertical_bias="0.913" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp" />
 
     <EditText
         android:id="@+id/internetTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/groceriesTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/internetTitle" />
+
+        app:layout_constraintTop_toBottomOf="@+id/internetTitle"
+        tools:layout_editor_absoluteX="46dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/groceriesTextInput"
@@ -195,14 +168,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
         android:layout_marginEnd="210dp"
-        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/phonePlanTitle"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groceriesTitle" />
 
@@ -210,17 +182,13 @@
         android:id="@+id/phoneTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="220dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/fuelTitle"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonePlanTitle" />
 
     <EditText
@@ -229,14 +197,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
         android:layout_marginEnd="210dp"
-        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/otherExpensesTitle"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fuelTitle" />
 
@@ -244,15 +211,28 @@
         android:id="@+id/otherExpensesTextInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="210dp"
+        android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="$"
         android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/otherExpensesTitle"
+        tools:layout_editor_absoluteX="80dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/deduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="351dp"
+        android:layout_marginBottom="5dp"
+        android:text="0.30"
+        app:layout_constraintBottom_toTopOf="@+id/incomeTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherExpensesTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
