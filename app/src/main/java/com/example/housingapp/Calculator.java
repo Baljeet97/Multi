@@ -29,33 +29,40 @@ public class Calculator extends AppCompatActivity {
     EditText fuelInput;
     EditText otherExpensesInput;
     TextView output;
-    int income;
-    int internet;
-    int groceries;
-    int phone;
-    int fuel;
-    int others;
-    String avlaibleMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         incomeInput = findViewById(R.id.incomeTextInput);
-        incomeInput.addTextChangedListener(textWatcher);
+        incomeInput.addTextChangedListener(new calculatorWatcher(incomeInput));
         internetInput = findViewById(R.id.internetTextInput);
-        internetInput.addTextChangedListener(textWatcher);
+        internetInput.addTextChangedListener(new calculatorWatcher(internetInput));
         groceriesInput = findViewById(R.id.groceriesTextInput);
-        groceriesInput.addTextChangedListener(textWatcher);
+        groceriesInput.addTextChangedListener(new calculatorWatcher(groceriesInput));
         phoneInput = findViewById(R.id.phoneTextInput);
-        phoneInput.addTextChangedListener(textWatcher);
+        phoneInput.addTextChangedListener(new calculatorWatcher(phoneInput));
         fuelInput= findViewById(R.id.fuelTextInput);
-        fuelInput.addTextChangedListener(textWatcher);
+        fuelInput.addTextChangedListener(new calculatorWatcher(fuelInput));
         otherExpensesInput = findViewById(R.id.otherExpensesTextInput);
-        otherExpensesInput.addTextChangedListener(textWatcher);
+        otherExpensesInput.addTextChangedListener(new calculatorWatcher(otherExpensesInput));
         output = findViewById(R.id.availableMoneyTextOutput);
     }
-    TextWatcher textWatcher = new TextWatcher() {
+
+    public static class calculatorWatcher implements TextWatcher {
+        private EditText mEditText;
+        int income;
+        int internet;
+        int groceries;
+        int phone;
+        int fuel;
+        int others;
+        String availableMoney;
+
+        private calculatorWatcher(EditText editText) {
+            mEditText = editText;
+        }
+
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -63,13 +70,38 @@ public class Calculator extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        
+            switch ((mEditText.getId())){
+                case R.id.incomeTextInput:
+                    income = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+                case R.id.internetTextInput:
+                    internet = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+                case R.id.groceriesTextInput:
+                    groceries = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+                case R.id.phoneTextInput:
+                    phone = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+                case R.id.fuelTextInput:
+                    fuel = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+                case R.id.otherExpensesTextInput:
+                    others = Integer.parseInt(String.valueOf(charSequence));
+                    break;
+            }
         }
 
         @Override
         public void afterTextChanged(Editable editable) {
+            availableMoney = Double.toString(income - (income *0.3) - internet - groceries -
+                    phone - fuel - others);
 
+            // For testing purposes available money is displayed in console
+            System.out.println(availableMoney);
+            //output.setText(availableMoney);
         }
+
     };
 
 }
