@@ -1,5 +1,6 @@
 package com.example.housingapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,14 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Calculator extends AppCompatActivity {
-    EditText incomeInput;
-    EditText internetInput;
-    EditText groceriesInput;
-    EditText phoneInput;
-    EditText fuelInput;
-    EditText otherExpensesInput;
+    EditText incomeInput, internetInput, groceriesInput, phoneInput, fuelInput, otherExpensesInput;
     TextView output, deduct, finalOutput, colourBarOutput;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +38,7 @@ public class Calculator extends AppCompatActivity {
             double fuel = 0;
             double others = 0;
             double fullOutput;
+            String finalIncomeText = "$0.0";
             String outputText;
 
             @Override
@@ -56,7 +52,8 @@ public class Calculator extends AppCompatActivity {
                     float income = Float.parseFloat(incomeInput.getText().toString());
                     finalIncome = (income * 0.3);
                     fullIncome = income;
-                    output.setText(String.valueOf(finalIncome));
+                    finalIncomeText = "$" + finalIncome;
+                    output.setText(finalIncomeText);
                 }
 
                 if (!internetInput.getText().toString().equals("")) {
@@ -101,12 +98,15 @@ public class Calculator extends AppCompatActivity {
         String roommatesText ="";
         if (amount <= 150){
             roommatesText = "Find 2 or more people";
+            colourBarOutput.setBackgroundColor(Color.RED);
         }
         else if (amount < 300 && amount > 150){
             roommatesText = "Find 1 or more people";
+            colourBarOutput.setBackgroundColor(Color.YELLOW);
         }
         else{
             roommatesText = "Can rent by yourself";
+            colourBarOutput.setBackgroundColor(Color.GREEN);
         }
         colourBarOutput.setText(roommatesText);
     }
