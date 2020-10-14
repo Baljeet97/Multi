@@ -1,5 +1,7 @@
 package com.example.housingapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -125,7 +127,26 @@ public class LegalFragment extends Fragment {
 
 
 
-
+        ticaIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("TICA");
+                builder.setMessage("Want to rent a home in Cairns? You need to know about TICA " +
+                        "tenancy database. If you have been blacklisted this might stop you " +
+                        "getting a new rental. " +
+                        "TICA has a FREE calculator to help you work out a budget");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
 
 
 
