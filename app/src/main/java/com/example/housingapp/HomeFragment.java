@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 public class HomeFragment extends Fragment {
 //    private onFragmentBtnSelected listener;
-    Button expenses, room, flat;
+    Button expenses, room, flat, skill;
     ImageView myProfile;
 
     @Nullable
@@ -30,6 +30,8 @@ public class HomeFragment extends Fragment {
         room = view.findViewById(R.id.room);
         flat = view.findViewById(R.id.flat);
         myProfile = view.findViewById(R.id.myProfile);
+        skill = view.findViewById(R.id.qldSkill);
+
         expenses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +57,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://ozflatmates.com/");
+            }
+        });
+
+        skill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://desbt.qld.gov.au/");
             }
         });
 

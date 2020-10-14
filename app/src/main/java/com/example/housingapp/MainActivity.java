@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (password.isEmpty()){
-            editTextPassword.setError("Password is required");
+            editTextPassword.setError("Invalid Password");
             editTextPassword.requestFocus();
             return;
         }
