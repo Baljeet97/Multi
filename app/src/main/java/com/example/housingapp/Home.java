@@ -63,24 +63,28 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_fragment, new HomeFragment());
+                setTitle("Home");
                 fragmentTransaction.commit();
                 break;
             case R.id.help:
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_fragment, new HelpFragment());
+                setTitle("Help");
                 fragmentTransaction.commit();
                 break;
             case R.id.legal:
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_fragment, new LegalFragment());
+                setTitle("Legal Help");
                 fragmentTransaction.commit();
                 break;
             case R.id.abt:
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_fragment, new AboFragment());
+                setTitle("Aboriginal and Islander Help");
                 fragmentTransaction.commit();
                 break;
         }

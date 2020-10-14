@@ -4,4 +4,253 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LegalFragment"/>
+    tools:context=".LegalFragment">
+
+    <ImageView
+        android:id="@+id/ticaIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/tica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/dataBaseIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/tenancy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ticaIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/atsilsIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/atsils"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenancy"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/bondIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/bond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atsilsIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/rtaIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/rta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bondIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/legalAidIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/legalAid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rtaIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/tenantsQldIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/tenantsQld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legalAidIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/qldHousingIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/qldHousing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tenantsQldIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/legallyYoursIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/legallyYours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qldHousing"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/homelessIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/homeless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legallyYoursIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/tica"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounder_corners"
+        android:text="TICA"
+        app:layout_constraintStart_toEndOf="@+id/ticaIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/tenancy"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+        android:text="Tenancy Database"
+        app:layout_constraintStart_toEndOf="@+id/dataBaseIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tica"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/atsils"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+
+        android:text="ATSILS"
+        app:layout_constraintStart_toEndOf="@+id/atsilsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tenancy"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bond"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+        android:text="Bond Loan"
+        app:layout_constraintStart_toEndOf="@+id/bondIcon"
+        app:layout_constraintTop_toBottomOf="@+id/atsils"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/rta"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+        android:text="RTA"
+        app:layout_constraintStart_toEndOf="@+id/rtaIcon"
+        app:layout_constraintTop_toBottomOf="@+id/bond"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/legalAid"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounder_corners"
+
+        android:text="Legal Aid Cairns"
+        app:layout_constraintStart_toEndOf="@+id/legalAidIcon"
+        app:layout_constraintTop_toBottomOf="@+id/rta"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/tenantsQld"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+        android:text="Tenants QLD"
+        app:layout_constraintStart_toEndOf="@+id/tenantsQldIcon"
+        app:layout_constraintTop_toBottomOf="@+id/legalAid"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/qldHousing"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/rounder_corners"
+        android:text="Queensland Housing"
+        app:layout_constraintStart_toEndOf="@+id/qldHousingIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tenantsQld"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/legallyYours"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounder_corners"
+        android:text="Legally Yours"
+        app:layout_constraintStart_toEndOf="@+id/legallyYoursIcon"
+        app:layout_constraintTop_toBottomOf="@+id/qldHousing"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/homeless"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounder_corners"
+
+
+        android:text="Homeless Person Legal Clinic"
+        app:layout_constraintStart_toEndOf="@+id/homelessIcon"
+        app:layout_constraintTop_toBottomOf="@+id/legallyYours"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

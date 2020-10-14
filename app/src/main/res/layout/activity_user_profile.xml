@@ -13,7 +13,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="430dp"
+            android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@color/colorPrimaryDark"
             tools:ignore="MissingConstraints" />
@@ -411,12 +411,11 @@
 
         <TableLayout
             android:id="@+id/table"
-            android:layout_width="409dp"
-            android:layout_height="530dp"
-            android:layout_marginStart="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="42dp"
             android:stretchColumns="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -452,7 +451,7 @@
                 android:padding="5dp">
 
                 <TextView
-                    android:layout_width="254dp"
+                    android:layout_width="297dp"
                     android:layout_height="103dp"
                     android:padding="3dip"
                     android:text="Driver's Licence/Proof of Age Card" />

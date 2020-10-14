@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.util.Objects;
+
 
 public class HomeFragment extends Fragment {
 //    private onFragmentBtnSelected listener;
@@ -31,6 +33,8 @@ public class HomeFragment extends Fragment {
         flat = view.findViewById(R.id.flat);
         myProfile = view.findViewById(R.id.myProfile);
         skill = view.findViewById(R.id.qldSkill);
+
+        Objects.requireNonNull(getActivity()).setTitle("Home");
 
         expenses.setOnClickListener(new View.OnClickListener() {
             @Override
