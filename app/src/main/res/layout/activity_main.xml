@@ -15,7 +15,9 @@
         android:maxHeight="42dp"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="7dp" />
 
     <EditText
         android:id="@+id/email"
@@ -47,15 +49,20 @@
 
     <Button
         android:id="@+id/signIn"
-        android:layout_width="349dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="231dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rounder_corners"
         android:text="Login"
         android:textColor="#ffffff"
-        android:background="@drawable/rounder_corners"
         android:textSize="26sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="MissingConstraints" />
@@ -68,8 +75,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="49dp"
         android:text="Register"
-        android:textSize="16sp"
         android:textColor="@color/register"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.77"

@@ -149,6 +149,192 @@ public class LegalFragment extends Fragment {
         });
 
 
+        dataBaseIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Tenancy Database");
+                builder.setMessage("Want to get off TICA? This real handy link shows your rights to " +
+                        "ask questions about your details on a database, and how you can get off a " +
+                        "database like 3 year limits, or victims of domestic violence can get an " +
+                        "order to get removed");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        atsilsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("ATSILS");
+                builder.setMessage("Are you an Aboriginal or Torres Strait Islander? If so you can " +
+                        "reach out to ATSILS as they are a community based organisation who can " +
+                        "provide legal services to help resolve your issue");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        bondIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Bond Loan");
+                builder.setMessage("Need a bond loan or rental grant? Lots of good stuff here about " +
+                        "getting a bond loan, how to apply for a bond loan, eligibility");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+
+        rtaIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("RTA");
+                builder.setMessage("Want to get your bond back? Had a argument with your landlord?" +
+                        " This government website can help you settle a dispute, show you how to " +
+                        "end a rental tenancy, and get your bond back. ");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        legalAidIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Legal Aid Cairns");
+                builder.setMessage("In trouble with the law? Experiencing domestic violence? Charged " +
+                        "with an offence? Been ripped off by a business and want your money back? " +
+                        "Legal Aid in Cairns is one option to try");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        tenantsQldIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Tenants QLD");
+                builder.setMessage("Need advice or assistance understanding tenancy rights? Support " +
+                        "talking to your lessor or agent? Help writing letters or completing tenancy " +
+                        "forms? Tenants Queensland can help resolve your issue and refer you to other " +
+                        "services if needed.");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        qldHousingIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Queensland Housing");
+                builder.setMessage("Need help removing your name from a tenancy database? This " +
+                        "Government website provides information on how to challenge a listing in a " +
+                        "database and how to lodge a dispute resolution request");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        legallyYoursIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Legally Yours");
+                builder.setMessage("Need help identifying which lawyers offer free pro bono work? " +
+                        "This website provides a list of every legal clinic in Queensland that offers" +
+                        " pro bono work to help with your issue. ");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        homelessIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Homeless Persons Legal Clinic");
+                builder.setMessage("Are you at risk of homelessness? Do you need legal representation " +
+                        "or advice? Law Right offer free legal representation to people at risk and " +
+                        "are here to help resolve problems with landlords, eviction or even if your " +
+                        "struggling to get a new rental.");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+
+
+
 
 
 
