@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class UserProfile extends AppCompatActivity {
 
     Button home;
+    ImageView backIcon;
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -34,11 +36,19 @@ public class UserProfile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
 
         home = findViewById(R.id.btnHome);
+        backIcon = findViewById(R.id.backIcon);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
              startActivity(new Intent(UserProfile.this, Home.class));
+            }
+        });
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UserProfile.this, Home.class));
             }
         });
 

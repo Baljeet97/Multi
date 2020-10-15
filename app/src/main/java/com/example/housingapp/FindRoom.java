@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class FindRoom extends AppCompatActivity {
     Button domainLow, domainMed, domainHigh, realEstateLow, realEstateMed, realEstateHigh;
+    ImageView backIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,13 @@ public class FindRoom extends AppCompatActivity {
                         "4870%3b+manoora,+qld+4870%3b+cairns+north,+qld+4870%3b+cairns+city,+" +
                         "qld+4870%3b+trinity+beach,+qld+4879%3b+trinity+park,+qld+4879%3b+kewarra" +
                         "+beach,+qld+4879/list-1?activeSort=price-asc&source=refinement");
+            }
+        });
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FindRoom.this, Home.class));
             }
         });
 

@@ -18,6 +18,7 @@
             android:background="@color/colorPrimaryDark"
             tools:ignore="MissingConstraints" />
 
+
         <TextView
             android:id="@+id/incomeTitle"
             android:layout_width="wrap_content"
@@ -328,6 +329,16 @@
             app:layout_constraintBottom_toTopOf="@+id/deduct"
             app:layout_constraintEnd_toStartOf="@+id/incomeTitle"
             app:srcCompat="@drawable/money" />
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="59dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

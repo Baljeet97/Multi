@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -26,6 +27,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private Button registerUser, signPage;
     ProgressBar progressBar;
 
+    ImageView backIcon;
+
     private FirebaseAuth mAuth;
 
     @Override
@@ -34,6 +37,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_register_user);
 
         mAuth = FirebaseAuth.getInstance();
+
+        backIcon = findViewById(R.id.backIcon);
 
         editName = findViewById(R.id.name);
         editEmail = findViewById(R.id.email);
@@ -57,6 +62,13 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         signPage.setOnClickListener(this);
 
         progressBar = findViewById(R.id.progressBar);
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterUser.this, Home.class));
+            }
+        });
 
 
     }

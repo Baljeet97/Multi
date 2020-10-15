@@ -1,10 +1,13 @@
 package com.example.housingapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Calculator extends AppCompatActivity {
     EditText incomeInput, internetInput, groceriesInput, phoneInput, fuelInput, otherExpensesInput;
     TextView output, deduct, finalOutput, colourBarOutput;
+    ImageView backIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,14 @@ public class Calculator extends AppCompatActivity {
         deduct = findViewById(R.id.deduct);
         finalOutput = findViewById(R.id.afterAllDeducted);
         colourBarOutput = findViewById(R.id.colourBar);
+        backIcon = findViewById(R.id.backIcon);
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            startActivity(new Intent(Calculator.this, Home.class));
+            }
+        });
 
 
         TextWatcher textWatcher = new TextWatcher() {
