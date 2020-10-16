@@ -74,7 +74,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
-        <EditText
+        <com.santalu.maskara.widget.MaskEditText
             android:id="@+id/dob"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -82,6 +82,9 @@
             android:ems="10"
             android:hint="Date of Birth DD/MM/YYYY"
             android:inputType="date"
+            app:mask="  /  /    "
+            app:maskCharacter=" "
+            app:maskStyle="completable"
             android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -95,6 +98,7 @@
             android:ems="10"
             android:hint="Phone Number"
             android:inputType="number"
+            android:maxLength="10"
             android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

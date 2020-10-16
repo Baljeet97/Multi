@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class FindRoom extends AppCompatActivity {
-    Button domainLow, domainMed, domainHigh, realEstateLow, realEstateMed, realEstateHigh;
+    Button domainLow, domainMed, domainHigh, realEstateLow, realEstateMed, realEstateHigh, calculatorButton;
     ImageView backIcon;
 
     @Override
@@ -24,6 +24,22 @@ public class FindRoom extends AppCompatActivity {
         realEstateLow = findViewById(R.id.realEstateLow);
         realEstateMed = findViewById(R.id.realEstateMed);
         realEstateHigh = findViewById(R.id.realEstateHigh);
+        calculatorButton = findViewById(R.id.calcButton);
+        backIcon = findViewById(R.id.backIcon);
+
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FindRoom.this, Home.class));
+            }
+        });
+
+        calculatorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FindRoom.this, Calculator.class));
+            }
+        });
 
         domainLow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,13 +95,6 @@ public class FindRoom extends AppCompatActivity {
                         "4870%3b+manoora,+qld+4870%3b+cairns+north,+qld+4870%3b+cairns+city,+" +
                         "qld+4870%3b+trinity+beach,+qld+4879%3b+trinity+park,+qld+4879%3b+kewarra" +
                         "+beach,+qld+4879/list-1?activeSort=price-asc&source=refinement");
-            }
-        });
-
-        backIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(FindRoom.this, Home.class));
             }
         });
 

@@ -19,6 +19,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class RegisterUser extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editName, editEmail, editDob, editNumber, editCompanyName,
@@ -29,7 +32,10 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
     ImageView backIcon;
 
+
     private FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +75,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(RegisterUser.this, Home.class));
             }
         });
+
+
 
 
     }
@@ -113,14 +121,17 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         if (number.isEmpty()) {
             editNumber.setError("Number is Required");
             editNumber.requestFocus();
+
             return;
         }
 
+
         if (dateOfBirth.isEmpty()) {
-            editNumber.setError("Date of Birth is Required");
-            editNumber.requestFocus();
+            editDob.setError("Date of Birth is Required");
+            editDob.requestFocus();
             return;
         }
+
 
         if (email.isEmpty()) {
             editEmail.setError("Email is required");
