@@ -11,7 +11,7 @@
         android:layout_width="55dp"
         android:layout_height="54dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintEnd_toStartOf="@+id/tica"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,11 +24,13 @@
         android:layout_height="54dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/atsilsIcon"
         app:layout_constraintEnd_toStartOf="@+id/tenancy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ticaIcon"
         app:srcCompat="@drawable/ic_baseline_info_24"
         tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
 
     <ImageView
         android:id="@+id/atsilsIcon"
@@ -132,9 +134,11 @@
         android:id="@+id/tica"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/rounder_corners"
         android:text="TICA"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ticaIcon"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
