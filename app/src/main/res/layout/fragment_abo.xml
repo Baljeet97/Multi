@@ -8,182 +8,46 @@
 
     <Button
         android:id="@+id/tica"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
+        android:layout_width="235dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="78dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Abstudy"
-        app:layout_constraintBottom_toTopOf="@+id/tenancy"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/tenancy"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
+        android:layout_width="235dp"
+        android:layout_height="84dp"
 
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="60dp"
 
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/rounder_corners"
         android:text="Youth Allowance"
-        app:layout_constraintBottom_toTopOf="@+id/atsils"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tica"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/atsils"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_width="237dp"
+        android:layout_height="64dp"
 
-        android:layout_marginEnd="78dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="68dp"
 
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
+
         android:background="@drawable/rounder_corners"
         android:text="Payment And Service Finder"
-        app:layout_constraintBottom_toTopOf="@+id/bond"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tenancy"
         tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/bond"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="10dp"
-
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Kids Helpline"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/rta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/atsils"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/rta"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="10dp"
-
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Young Mental Wellbeing"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/legalAid"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bond"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/legalAid"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="78dp"
-
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Black Dog Institute"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/tenantsQld"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rta"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/tenantsQld"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="My Skills"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/qldHousing"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/legalAid"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/qldHousing"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="10dp"
-
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="HeadSpace"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/legallyYours"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tenantsQld"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/legallyYours"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-        android:text="Covid-19"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/homeless"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qldHousing"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/homeless"
-        android:layout_width="252dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
-
-
-        android:text="Link to Govenment Help Sites"
-        android:visibility="invisible"
-        app:layout_constraintTop_toBottomOf="@+id/legallyYours"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="81dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

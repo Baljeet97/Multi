@@ -214,7 +214,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/afterAll"
+            app:layout_constraintVertical_bias="0.379"
             tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/roomFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find A Place"
+            android:layout_marginStart="139dp"
+            android:background="@drawable/rounder_corners"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="139dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afterAllDeducted" />
 
         <TextView
             android:id="@+id/deduct"
@@ -250,7 +266,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="50dp"
-            android:text="Calculator"
+            android:text=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -263,8 +279,8 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
-            android:background="#FF0000"
-            android:text="Find 2 or more people"
+            android:background="#00FF0000"
+            android:text=" "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/deduct"

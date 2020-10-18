@@ -6,20 +6,25 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Objects;
+
 public class Calculator extends AppCompatActivity {
     EditText incomeInput, internetInput, groceriesInput, phoneInput, fuelInput, otherExpensesInput;
     TextView output, deduct, finalOutput, colourBarOutput;
     ImageView backIcon;
+    Button finRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Calculator");
         setContentView(R.layout.activity_calculator);
         incomeInput = findViewById(R.id.incomeTextInput);
         internetInput = findViewById(R.id.internetTextInput);
@@ -32,11 +37,21 @@ public class Calculator extends AppCompatActivity {
         finalOutput = findViewById(R.id.afterAllDeducted);
         colourBarOutput = findViewById(R.id.colourBar);
         backIcon = findViewById(R.id.backIcon);
+        finRoom = findViewById(R.id.roomFind);
+
 
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             startActivity(new Intent(Calculator.this, Home.class));
+            }
+
+        });
+
+        finRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Calculator.this,FindRoom.class));
             }
         });
 
@@ -107,12 +122,13 @@ public class Calculator extends AppCompatActivity {
     }
 
     public void changeColourBar(double amount) {
-        String roommatesText ="";
-        if (amount <= 150){
+        String roommatesText = " ";
+
+        if (amount <= 100){
             roommatesText = "Find 2 or more people";
             colourBarOutput.setBackgroundColor(Color.RED);
         }
-        else if (amount < 300 && amount > 150){
+        else if (amount < 200 && amount > 100){
             roommatesText = "Find 1 or more people";
             colourBarOutput.setBackgroundColor(Color.YELLOW);
         }
