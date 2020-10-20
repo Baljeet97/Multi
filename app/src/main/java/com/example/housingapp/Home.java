@@ -84,16 +84,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_fragment, new AboFragment());
-                setTitle("Aboriginal and Islander Help");
+                setTitle("Indigenous and Islander Help");
                 fragmentTransaction.commit();
                 break;
         }
 
         return true;
     }
-//
-//    @Override
-//    public void onButtonSelected() {
-//
-//    }
+
 }

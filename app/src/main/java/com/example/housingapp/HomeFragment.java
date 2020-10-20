@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
         skill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://desbt.qld.gov.au/");
+                gotoUrl("https://www.tenancyskills.com.au/online/");
             }
         });
 
@@ -95,55 +95,5 @@ public class HomeFragment extends Fragment {
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
-//    @Override
-//    public void onAttach(@NonNull Context context) {
-//        super.onAttach(context);
-//        if (context instanceof onFragmentBtnSelected) {
-//            listener = (onFragmentBtnSelected) context;
-//        } else {
-//            throw new ClassCastException(context.toString() + "must implement listener");
-//        }
-//    }
-//
-//    public interface onFragmentBtnSelected {
-//        public void onButtonSelected();
-//    }
-
-
-//    expenses = view.findViewById(R.id.expenses);
-//    room = view.findViewById(R.id.room);
-//    flat = view.findViewById(R.id.flat);
-//    myProfile = view.findViewById(R.id.myProfile);
-//
-//        expenses.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            listener.onButtonSelected();
-//
-//        }
-//    });
-//
-//        room.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            listener.onButtonSelected();
-//        }
-//    });
-//
-//        flat.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            listener.onButtonSelected();
-//
-//        }
-//    });
-//
-//        myProfile.setOnClickListener(new View.OnClickListener() {
-//        @Override
-//        public void onClick(View view) {
-//            listener.onButtonSelected();
-//
-//        }
-//    });
 
 }

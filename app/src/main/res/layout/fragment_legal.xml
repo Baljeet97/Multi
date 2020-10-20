@@ -134,8 +134,9 @@
         android:id="@+id/tica"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="78dp"
-        android:layout_marginTop="60dp"
         android:background="@drawable/rounder_corners"
         android:text="TICA"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,10 +149,13 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
 
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Tenancy Database"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dataBaseIcon"
         app:layout_constraintTop_toBottomOf="@+id/tica"
         tools:ignore="MissingConstraints" />
@@ -160,11 +164,14 @@
         android:id="@+id/atsils"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+
         android:layout_marginTop="10dp"
 
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
-
         android:text="ATSILS"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/atsilsIcon"
         app:layout_constraintTop_toBottomOf="@+id/tenancy"
         tools:ignore="MissingConstraints" />
@@ -174,10 +181,13 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
 
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Bond Loan"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bondIcon"
         app:layout_constraintTop_toBottomOf="@+id/atsils"
         tools:ignore="MissingConstraints" />
@@ -187,10 +197,13 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
 
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="RTA"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rtaIcon"
         app:layout_constraintTop_toBottomOf="@+id/bond"
         tools:ignore="MissingConstraints" />
@@ -200,10 +213,13 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="4dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounder_corners"
 
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/rounder_corners"
         android:text="Legal Aid Cairns"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/legalAidIcon"
         app:layout_constraintTop_toBottomOf="@+id/rta"
         tools:ignore="MissingConstraints" />
@@ -212,10 +228,13 @@
         android:id="@+id/tenantsQld"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
 
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Tenants QLD"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tenantsQldIcon"
         app:layout_constraintTop_toBottomOf="@+id/legalAid"
         tools:ignore="MissingConstraints" />
@@ -225,10 +244,13 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="4dp"
 
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Queensland Housing"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/qldHousingIcon"
         app:layout_constraintTop_toBottomOf="@+id/tenantsQld"
         tools:ignore="MissingConstraints" />
@@ -238,9 +260,12 @@
         android:layout_width="252dp"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="4dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Legally Yours"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/legallyYoursIcon"
         app:layout_constraintTop_toBottomOf="@+id/qldHousing"
         tools:ignore="MissingConstraints" />
@@ -249,11 +274,14 @@
         android:id="@+id/homeless"
         android:layout_width="252dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="10dp"
+
+
+        android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
-
-
         android:text="Homeless Person Legal Clinic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/homelessIcon"
         app:layout_constraintTop_toBottomOf="@+id/legallyYours"
         tools:ignore="MissingConstraints" />
