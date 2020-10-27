@@ -276,8 +276,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="10dp"
-
-
         android:layout_marginEnd="78dp"
         android:background="@drawable/rounder_corners"
         android:text="Homeless Person Legal Clinic"
@@ -285,4 +283,32 @@
         app:layout_constraintStart_toEndOf="@+id/homelessIcon"
         app:layout_constraintTop_toBottomOf="@+id/legallyYours"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/legalActIcon"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintEnd_toStartOf="@+id/legaActButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homelessIcon"
+        app:srcCompat="@drawable/ic_baseline_info_24"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/legaActButton"
+        android:layout_width="253dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="78dp"
+        android:background="@drawable/rounder_corners"
+        android:text="RTA ACT Chapter 9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/legalActIcon"
+        app:layout_constraintTop_toBottomOf="@+id/homeless"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

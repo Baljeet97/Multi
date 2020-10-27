@@ -20,10 +20,10 @@ import android.widget.ImageView;
 public class LegalFragment extends Fragment {
 
     Button tica, tenancyDatabase, atsils, bond, rta, legalAid, tenantsQld, qldHousing, legallyYours,
-    homeless;
+    homeless, legalActButton;
 
     ImageView ticaIcon, dataBaseIcon, atsilsIcon, bondIcon, rtaIcon, legalAidIcon, tenantsQldIcon,
-    qldHousingIcon, legallyYoursIcon, homelessIcon;
+    qldHousingIcon, legallyYoursIcon, homelessIcon, legalActIcon;
 
     @Nullable
     @Override
@@ -40,6 +40,7 @@ public class LegalFragment extends Fragment {
         qldHousing = view.findViewById(R.id.qldHousing);
         legallyYours = view.findViewById(R.id.legallyYours);
         homeless = view.findViewById(R.id.homeless);
+        legalActButton = view.findViewById(R.id.legaActButton);
 
 
         ticaIcon = view.findViewById(R.id.ticaIcon);
@@ -52,6 +53,7 @@ public class LegalFragment extends Fragment {
         qldHousingIcon = view.findViewById(R.id.qldHousingIcon);
         legallyYoursIcon = view.findViewById(R.id.legallyYoursIcon);
         homelessIcon = view.findViewById(R.id.homelessIcon);
+        legalActIcon = view.findViewById(R.id.legalActIcon);
 
 
         tica.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +123,13 @@ public class LegalFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("http://www.lawright.org.au/cms/page.asp?ID=60736");
+            }
+        });
+
+        legalActButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.legislation.qld.gov.au/view/html/inforce/current/act-2008-073#ch.9");
             }
         });
 
@@ -320,6 +329,27 @@ public class LegalFragment extends Fragment {
                         "or advice? Law Right offer free legal representation to people at risk and " +
                         "are here to help resolve problems with landlords, eviction or even if your " +
                         "struggling to get a new rental.");
+                builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setCancelable(false);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
+        legalActIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("RTA ACT - Chapter 9");
+                builder.setMessage("Want the ducks nuts on getting off a database? A landlord or " +
+                        "rental agency giving you grief? Tell them you have rights in Chapter 9 of" +
+                        " the Residential Tenancies and Rooming Act 2008. This is the LAW! What words " +
+                        "mean. Have a look!");
                 builder.setNegativeButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
